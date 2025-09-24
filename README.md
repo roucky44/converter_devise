@@ -11,32 +11,43 @@ Léo Vigin
 
 **Sélection des devises :**
   - Les utilisateurs doivent pouvoir sélectionner les devises source et cible à partir de listes déroulantes.
-      - [ ] 
-<br>
 
 **Saisie du montant :**
   -  Ajoutez un champ où les utilisateurs peuvent entrer le montant à convertir.
-      - [ ] 
-<br>
 
 **Conversion en temps réel :**
   -  La conversion devrait s’effectuer en temps réel à mesure que l’utilisateur saisit le montant.
-      - [ ] 
-<br>
 
 **Taux de change :**
   - Utilisez des taux de change réels pour effectuer les conversions.
-      - [ ] 
-<br>
 
 **Affichage du résultat :**
   -  Affichez le résultat de la conversion de manière claire et lisible.
-      - [ ] 
-<br>
 
 **Historique des conversions :**
   -  Enregistrez et affichez l’historique des conversions (à l’aide de localStorage), sous la forme suivante : Date : 100 EUR = 110 USD.
-      - [ ] 
+
+<br>
+
+## Code
+- JS
+    - [ ] LocalStorage
+    - [ ] API
+      - [ ] Liste déroulante
+    - [ ] Conversion temps réel (variable du résultat)
+
+  <br>
+
+- HTML
+   - [ ] Form
+     - [ ] Input (number)
+
+  <br>
+
+- CSS
+     - [ ] Résultat
+     - [ ] Historique
+
 
 <br>
 
@@ -47,4 +58,4 @@ Léo Vigin
 - **Gi**t : Le repository doit être propre et bien structuré (branches, commits, etc).
 <br>
 
-**Deadline : Dimanche 28 Septembre 23h59**
+# Deadline : Dimanche 28 Septembre 23h59
