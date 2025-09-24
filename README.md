@@ -45,7 +45,6 @@ Léo Vigin
 - **Code** : Le code doit être propre et bien structuré.
 - **Interface** utilisateur : L’interface utilisateur doit être conviviale et esthétique.
 - **Gi**t : Le repository doit être propre et bien structuré (branches, commits, etc).
-
 <br>
 
 **Deadline : Dimanche 28 Septembre 23h59**
