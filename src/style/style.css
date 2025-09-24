@@ -122,10 +122,8 @@ select:focus {
 
 .submit-wrap {
   flex: 0 0 auto;
-  /* keep button compact */
 }
 
-/* Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
