@@ -5,6 +5,7 @@
   /* Peut être à modifier. */
   --accent: #d0fc20;
   --accent-light: #e8ff7a;
+  --input-error: #ff4d4d;
   --text-main: #e0e0e0;
   --text-alt: #9a9a9a;
   /* Peut être à modifier. */
@@ -102,6 +103,12 @@ select:focus {
   box-shadow: 0 0 12px rgba(208, 252, 32, 0.4);
 }
 
+.input-error {
+  outline: none;
+  border: 1px solid var(--input-error);
+  box-shadow: 0 0 12px rgba(255, 27, 27, 0.4);;
+}
+
 .submit-input {
   background: var(--accent);
   color: #000;
@@ -119,6 +126,8 @@ select:focus {
   transform: translateY(-3px);
   box-shadow: 0 0 12px rgba(208, 252, 32, 0.6);
 }
+
+
 
 .submit-wrap {
   flex: 0 0 auto;
