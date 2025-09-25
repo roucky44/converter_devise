@@ -1,6 +1,5 @@
-// relier le fichier conversion.js au fichier localstorage.js
-
 let montantValue = document.getElementById('montant')
+let dateValue = new Date().toLocaleDateString()
 // let resultatValue = document.getElementById('resultat)
 // let cibleValue = document.getElementById('cible)
 // let deviseValue = document.getElementById('devise)
@@ -17,7 +16,7 @@ form.addEventListener("submit", (e) => {
     let historique = localStorage.getItem('historique')
 
     let total = { 
-        date: new Date().toLocaleDateString(),
+        date: dateValue,
         montant: montantValue.value,
         // cible: cibleValue.value
         // devise: deviseValue.value
@@ -40,13 +39,37 @@ form.addEventListener("submit", (e) => {
     // but de prendre la value du resultat de la conversion de conversion .js
 
     let historiqueArray = JSON.parse(localStorage.getItem('historique'));
+    // console.log(historiqueArray)
+
 
     historique_p.innerHTML = ''
     historiqueArray.forEach(e => { 
-        historique_p.innerHTML += `${e.date} : ${e.montant} <br/>`;
+        let eDate = e.date
+        let eMontant = e.montant
+        historique_p.innerHTML += `${eDate} : ${eMontant} <br/>`;
     });
 
-    // window.addEventListener('DOMContentLoaded', () => {
-    //     historique_p.innerHTML += `${e.date} : ${e.montant} <br/>`;
-    // });
 });
+
+// AFFICHER EN REFRESH---------------------------------------------
+
+
+let historiqueArray = JSON.parse(localStorage.getItem('historique'));
+
+document.addEventListener('DOMContentLoaded', () => {
+    let historique = localStorage.getItem('historique')
+    let eDate 
+    let eMontant
+
+    if (historique == null){
+        historique_p.innerHTML += `Aucun historique`;
+    }
+
+    else if (historique_p.innerHTML == '' && historique != null){
+        historiqueArray.forEach(e => {
+            eDate = e.date
+            eMontant = e.montant
+            historique_p.innerHTML += `${eDate} : ${eMontant} <br/>`;
+        });
+    }
+})
