@@ -2,54 +2,54 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Convertisseur de devise</title>
-  <link rel="stylesheet" href="style/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur de devise</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body id="body">
 
-  <div class="h1-div">
-    <h1 class="h1">Convertisseur <span>Dynamique</span></h1>
-  </div>
+    <div class="h1-div">
+        <h1 class="h1">Convertisseur <span>Dynamique</span></h1>
+    </div>
 
-  <section class="converter-section">
-    <form class="converter">
+    <section class="converter-section">
+        <form class="converter">
 
-      <div class="row">
-        <div class="form-group">
-          <label for="cible">Target</label>
-          <select name="cible" id="cible">
-            <option value="cible1">cible1</option>
-            <option value="cible2">cible2</option>
-          </select>
-        </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="cible">Target</label>
+                    <select name="cible" id="cible">
+                        <option value="cible1">cible1</option>
+                        <option value="cible2">cible2</option>
+                    </select>
+                </div>
 
-        <div class="form-group">
-          <label for="montant">Montant</label>
-          <input type="number" name="montant" id="montant" placeholder="Entrer montant">
-        </div>
-        
-        <div class="form-group">
-          <label for="result">Resultat</label>
-          <input type="number" name="result" id="result" readonly>
-        </div>
+                <div class="form-group">
+                    <label for="montant">Montant</label>
+                    <input type="number" name="montant" id="montant" placeholder="Entrer montant">
+                </div>
 
-        <div class="form-group">
-          <label for="devise">Devise</label>
-          <select name="devise" id="devise">
-            <option value="devise1">devise1</option>
-            <option value="devise2">devise2</option>
-          </select>
-        </div>
+                <div class="form-group">
+                    <label for="result">Resultat</label>
+                    <input type="number" name="result" id="result" readonly>
+                </div>
 
-        <div class="form-group submit-wrap">
-          <input class="submit-input" type="submit" value="Convert">
-        </div>
-      </div>
-    </form>
-  </section>
+                <div class="form-group">
+                    <label for="devise">Devise</label>
+                    <select name="devise" id="devise">
+                        <option value="devise1">devise1</option>
+                        <option value="devise2">devise2</option>
+                    </select>
+                </div>
+
+                <div class="form-group submit-wrap">
+                    <input class="submit-input" type="submit" value="Convert">
+                </div>
+            </div>
+        </form>
+    </section>
 </body>
 
 </html>
@@ -57,10 +57,12 @@
 </section>
 
 <section class="historique-section">
-  <div class="historique-div">
-    <h2>Historique</h2>
-  </div>
+    <div class="historique-div">
+        <h2>Historique</h2>
+    </div>
 </section>
+
+<script src="script/api.js"></script>
 
 </body>
 
