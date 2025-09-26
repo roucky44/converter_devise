@@ -1,5 +1,5 @@
 # converter_devise
-Julien Claiver 
+Julien Clavier 
 Lucas Audoubert
 Léo Vigin
 
@@ -32,9 +32,9 @@ Léo Vigin
 ## Code
 - JS
     - [X] LocalStorage
-    - [ ] API
-      - [ ] Liste déroulante
-    - [ ] Conversion temps réel (variable du résultat)
+    - [X] API
+      - [X] Liste déroulante
+    - [X] Conversion temps réel (variable du résultat)
 
   <br>
 
@@ -45,7 +45,7 @@ Léo Vigin
   <br>
 
 - CSS
-     - [ ] Résultat
+     - [X] Résultat
      - [X] Historique
 
 
@@ -55,7 +55,7 @@ Léo Vigin
 - **Fonctionnalités** : Les fonctionnalités doivent être implémentées correctement et fonctionner correctement.
 - **Code** : Le code doit être propre et bien structuré.
 - **Interface** utilisateur : L’interface utilisateur doit être conviviale et esthétique.
-- **Gi**t : Le repository doit être propre et bien structuré (branches, commits, etc).
+- **Git** : Le repository doit être propre et bien structuré (branches, commits, etc).
 <br>
 
 # Deadline : Dimanche 28 Septembre 23h59
