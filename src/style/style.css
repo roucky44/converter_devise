@@ -95,8 +95,7 @@ select {
   font-size: 1.1rem;
   transition: border var(--transition), box-shadow var(--transition);
 }
-
-input[type="number"]:focus,
+.input-default[type="number"]:focus,
 select:focus {
   outline: none;
   border: 1px solid var(--accent);
@@ -127,10 +126,34 @@ select:focus {
   box-shadow: 0 0 12px rgba(208, 252, 32, 0.6);
 }
 
-
-
 .submit-wrap {
   flex: 0 0 auto;
+}
+
+.historique-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.historique-div {
+  background: var(--bg-content);
+  padding: 2.5rem 3rem; 
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  min-width: 1400px; /* pas toucher (responsive)*/
+}
+
+#historique-h2 {
+  text-decoration: underline;
+  display: flex;
+  justify-content: center;
+}
+
+.historique-hr {
+  margin-top: 1rem;
+  border-color: #1a1a1a; /* la couleur marche ne s'affiche pas (A fix) */
 }
 
 @keyframes fadeIn {
