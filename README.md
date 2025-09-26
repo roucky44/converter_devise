@@ -31,7 +31,7 @@ Léo Vigin
 
 ## Code
 - JS
-    - [ ] LocalStorage
+    - [X] LocalStorage
     - [ ] API
       - [ ] Liste déroulante
     - [ ] Conversion temps réel (variable du résultat)
@@ -39,14 +39,14 @@ Léo Vigin
   <br>
 
 - HTML
-   - [ ] Form
-     - [ ] Input (number)
+   - [X] Form
+     - [X] Input (number)
 
   <br>
 
 - CSS
      - [ ] Résultat
-     - [ ] Historique
+     - [X] Historique
 
 
 <br>
