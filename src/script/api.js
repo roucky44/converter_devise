@@ -19,7 +19,7 @@ fetch(`${base_url}${key}/codes`)
 async function convert() {
   const devise = document.querySelector("#devise").value;
   const montant = document.querySelector("#montant").value;
-  // const target = document.querySelector('#target').value
+  const target = document.querySelector('#target').value
   const result = document.querySelector("#result");
 
   await GET`${base_url}${key}/pair/${devise}/EUR/${target}${montant}`
@@ -38,6 +38,7 @@ convert();
 const montant = document.querySelector("#montant");
 
 if ((montant.value = "")) {
+  classlist.remove("input-default");  
   classlist.add("input-error");
   elseif(montant.value != 0);
   {
