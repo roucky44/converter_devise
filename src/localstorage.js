@@ -1,36 +1,70 @@
-// relier le fichier conversion.js au fichier localstorage.js
-
-// JSAIS MEME PAS SI C BON
-
-const date = localStorage.getItem("date");
-const montant = localStorage.getItem("montant");
-// let resultat = localStorage.getItem('resultat')
-
-// besoin ?
-// let cible = localStorage.getItem('resultat')
-// let devise = localStorage.getItem('resultat')
-
-let montantValue = document.getElementById("montant");
+let montantValue = document.getElementById('montant')
+let dateValue = new Date().toLocaleDateString()
 // let resultatValue = document.getElementById('resultat)
-// let cibleValue = document.getElementById('resultat)
-// let deviseValue = document.getElementById('resultat)
+// let cibleValue = document.getElementById('cible)
+// let deviseValue = document.getElementById('devise)
 
-const form = document.querySelector(".converter");
-const historique = document.querySelector(".historique-div");
+
+const form = document.getElementById('form')
+const precedent = document.getElementById('historique')
+const historique_p = document.querySelector('#historique p');
+
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  localStorage.setItem("date", date);
-  // faire ddd/mmm/yyy
+    e.preventDefault()
 
-  localStorage.setItem("montant", montantValue.value);
-  // localStorage.setItem('cible', cibleValue.value)
-  // localStorage.setItem('devise', deviseValue.value)
-  // localStorage.setItem('resulat', resultatValue.value)
+    let historique = localStorage.getItem('historique')
+
+    let total = { 
+        date: dateValue,
+        montant: montantValue.value,
+        // cible: cibleValue.value
+        // devise: deviseValue.value
+    }
+
+    // console.log('historique', historique)
+    if(historique == null){
+        let totalDATA = JSON.stringify([total])
+        localStorage.setItem('historique', totalDATA)
+
+    } else {
+        let array = JSON.parse(historique)
+        // console.log('array', array)
+        array.push(total)
+        let totalDATA = JSON.stringify(array)
+        localStorage.setItem('historique', totalDATA)
+        // console.log('totalDATA', totalDATA)
+    }
 
   // but de prendre la value du resultat de la conversion de conversion .js
 
-  let p = document.createElement("p");
-  p.innerHTML = `${date} : ${montantValue.value} eur = jsp usd`; // ${cible} = ${resultat} ${desive}
-  historique.appendChild(p);
+    let historiqueArray = JSON.parse(localStorage.getItem('historique'));
+    // console.log(historiqueArray)
+
+
+    historique_p.innerHTML = ''
+    historiqueArray.forEach(e => { 
+        historique_p.innerHTML += `${e.date} : ${e.montant} <br/>`;
+    });
+
 });
+
+
+// AFFICHER EN REFRESH---------------------------------------------
+
+
+let historiqueArray = JSON.parse(localStorage.getItem('historique'));
+
+document.addEventListener('DOMContentLoaded', () => {
+    let historique = localStorage.getItem('historique')
+
+    if (historique == null){
+        historique_p.innerHTML += `Aucun historique`;
+    }
+
+    else if (historique_p.innerHTML == '' && historique != null){
+        historiqueArray.forEach(e => {
+            historique_p.innerHTML += `${e.date} : ${e.montant} <br/>`;
+        });
+    }
+})
