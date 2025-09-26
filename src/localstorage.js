@@ -6,8 +6,7 @@ let deviseValue = document.getElementById('devise')
 
 
 const form = document.querySelector('.converter')
-const precedent = document.getElementById('historique')
-const historique_p = document.querySelector('.historique-div');
+const historique_p = document.querySelector('.historique_p p');
 
 
 form.addEventListener("submit", (e) => {

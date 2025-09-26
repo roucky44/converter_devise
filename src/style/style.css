@@ -3,11 +3,11 @@
   /* Peut être à modifier. */
   --bg-content: #1a1a1a;
   /* Peut être à modifier. */
-  --accent: #d0fc20;
-  --accent-light: #e8ff7a;
+  --accent: #ffffff;
+  --accent-light: #ffffff;
   --input-error: #ff4d4d;
   --text-main: #e0e0e0;
-  --text-alt: #9a9a9a;
+  --text-alt: #d8d8d8;
   /* Peut être à modifier. */
   --radius: 14px;
   /* NE PAS TOUCHER */
@@ -44,7 +44,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: 0 0 20px rgba(208, 252, 32, 0.4); /* de base à 8px (changer si trop forte) */
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.4); /* de base à 8px (changer si trop forte) */
 }
 
 .converter-section {
@@ -99,7 +99,7 @@ select {
 select:focus {
   outline: none;
   border: 1px solid var(--accent);
-  box-shadow: 0 0 12px rgba(208, 252, 32, 0.4);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
 }
 
 .input-error {
@@ -123,7 +123,7 @@ select:focus {
 .submit-input:hover {
   background: var(--accent-light);
   transform: translateY(-3px);
-  box-shadow: 0 0 12px rgba(208, 252, 32, 0.6);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
 }
 
 .submit-wrap {
