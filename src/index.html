@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convertisseur de devise</title>
     <link rel="stylesheet" href="style/style.css">
-    <script src="script/api.js" defer async></script>
+    <!-- <script src="script/api.js" defer async></script> -->
 </head>
 
 <body id="body">
@@ -21,9 +21,7 @@
             <div class="row">
                 <div class="form-group">
                     <label for="cible">Target</label>
-                    <select name="cible" id="cible">
-                        <option value="cible1">cible1</option>
-                        <option value="cible2">cible2</option>
+                    <select name="cible" id="cible">>
                     </select>
                 </div>
 
@@ -34,19 +32,17 @@
 
                 <div class="form-group">
                     <label for="result">Resultat</label>
-                    <input type="number" name="result" id="result" readonly>
+                    <input class="input-default" type="number" name="result" id="result" readonly>
                 </div>
 
                 <div class="form-group">
                     <label for="devise">Devise</label>
                     <select name="devise" id="devise">
-                        <option value="devise1">devise1</option>
-                        <option value="devise2">devise2</option>
                     </select>
                 </div>
 
                 <div class="form-group submit-wrap">
-                    <input class="submit-input" type="submit" value="Convert">
+                    <input  class="submit-input" type="submit" value="Convertir">
                 </div>
             </div>
         </form>
