@@ -1,10 +1,14 @@
 const key = "0fbe4279f9d4713bd23c8733";
 const base_url = "https://v6.exchangerate-api.com/v6/";
 
+function convertirDevise(a, b) {
+  let resultat = a * b;
+  return resultat;
+}
+
 fetch(`${base_url}${key}/codes`)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
     const codes = data.supported_codes;
 
     let options = "";
@@ -18,29 +22,33 @@ fetch(`${base_url}${key}/codes`)
 
 async function convert() {
   const devise = document.querySelector("#devise").value;
-  const montant = document.querySelector("#montant").value;
-  const target = document.querySelector("#target").value;
+  const montant = Number(document.querySelector("#montant").value);
+  const cible = document.querySelector("#cible").value;
   const result = document.querySelector("#result");
 
-  await GET`${base_url}${key}/pair/${devise}/EUR/${target}${montant}`
-    .then((response) => response.json())
-    .then((data) => {
-      result.value = data.conversion_result;
-      innerHTML;
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-}
+  if (!montant || montant <= 0) {
+    document.querySelector("#montant").classList.add("input-error");
+    result.value = "Montant invalide";
+    return;
+  } else {
+    document.querySelector("#montant").classList.remove("input-error");
+  }
 
-convert();
+  try {
+    const response = await fetch(`${base_url}${key}/pair/${devise}/${cible}`);
+    const data = await response.json();
 
-const montant = document.querySelector("#montant");
-
-if ((montant.value = "")) {
-  classlist.add("input-error");
-  elseif(montant.value != 0);
-  {
-    classlist.remove("input-error");
+    if (data.conversion_rate) {
+      const valeurConvertie = convertirDevise(montant, data.conversion_rate);
+      result.value = valeurConvertie;
+      console.log(valeurConvertie);
+    } else {
+      result.value = "Erreur de conversion";
+    }
+  } catch (error) {
+    console.error(error);
+    result.value = "Erreur API";
   }
 }
+
+document.querySelector(".submit-input").addEventListener("click", convert);
