@@ -1,7 +1,7 @@
 const key = "0fbe4279f9d4713bd23c8733";
 const base_url = "https://v6.exchangerate-api.com/v6/";
 
-function convertirDevise(a, b) {
+function convertirDevise(a, b) { // Foncton au top car si appel export default ca bug. 
   let resultat = a * b;
   return resultat;
 }
