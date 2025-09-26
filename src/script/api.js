@@ -12,6 +12,7 @@ fetch(`${base_url}${key}/codes`)
     const codes = data.supported_codes;
 
     let options = "";
+    options += `<option value="" disabled selected>Selctionner option</option>`;
     codes.forEach((code) => {
       options += `<option value="${code[0]}">${code[0]} - ${code[1]}</option>`;
     });
@@ -50,5 +51,7 @@ async function convert() {
     result.value = "Erreur API";
   }
 }
+
+document.querySelector("#montant").addEventListener("input", convert);
 
 document.querySelector(".submit-input").addEventListener("click", convert);

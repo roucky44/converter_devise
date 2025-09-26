@@ -1,13 +1,13 @@
 let montantValue = document.getElementById('montant')
 let dateValue = new Date().toLocaleDateString()
-// let resultatValue = document.getElementById('resultat)
+let resultatValue = document.querySelector('#result')
 // let cibleValue = document.getElementById('cible)
 // let deviseValue = document.getElementById('devise)
 
 
-const form = document.getElementById('form')
+const form = document.querySelector('.converter')
 const precedent = document.getElementById('historique')
-const historique_p = document.querySelector('#historique p');
+const historique_p = document.querySelector('.historique-div');
 
 
 form.addEventListener("submit", (e) => {
@@ -55,7 +55,7 @@ form.addEventListener("submit", (e) => {
 
 let historiqueArray = JSON.parse(localStorage.getItem('historique'));
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', (e) => {
     let historique = localStorage.getItem('historique')
 
     if (historique == null){
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     else if (historique_p.innerHTML == '' && historique != null){
         historiqueArray.forEach(e => {
-            historique_p.innerHTML += `${e.date} : ${e.montant} <br/>`;
+            historique_p.innerHTML += `${e.date} : ${e.montant} -> ${e.resultatValue} <br/>`;
         });
     }
 })
