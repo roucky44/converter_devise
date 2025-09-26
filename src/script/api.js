@@ -12,7 +12,7 @@ fetch(`${base_url}${key}/codes`)
     const codes = data.supported_codes;
 
     let options = "";
-    options += `<option value="" disabled selected>Selctionner option</option>`;
+    options += `<option value="" disabled selected>Selectionner option</option>`;
     codes.forEach((code) => {
       options += `<option value="${code[0]}">${code[0]} - ${code[1]}</option>`;
     });

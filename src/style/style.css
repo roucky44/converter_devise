@@ -146,7 +146,6 @@ select:focus {
 }
 
 #historique-h2 {
-  text-decoration: underline;
   display: flex;
   justify-content: center;
 }
