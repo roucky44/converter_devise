@@ -1,8 +1,8 @@
 let montantValue = document.getElementById('montant')
 let dateValue = new Date().toLocaleDateString()
-let resultatValue = document.querySelector('#result')
-// let cibleValue = document.getElementById('cible)
-// let deviseValue = document.getElementById('devise)
+let resultatValue = document.getElementById('result')
+let cibleValue = document.getElementById('cible')
+let deviseValue = document.getElementById('devise')
 
 
 const form = document.querySelector('.converter')
@@ -18,8 +18,9 @@ form.addEventListener("submit", (e) => {
     let total = { 
         date: dateValue,
         montant: montantValue.value,
-        // cible: cibleValue.value
-        // devise: deviseValue.value
+        resultat: resultatValue.value,
+        cible: cibleValue.value,
+        devise: deviseValue.value
     }
 
     // console.log('historique', historique)
@@ -44,7 +45,7 @@ form.addEventListener("submit", (e) => {
 
     historique_p.innerHTML = ''
     historiqueArray.forEach(e => { 
-        historique_p.innerHTML += `${e.date} : ${e.montant} <br/>`;
+        historique_p.innerHTML += `${e.date} : ${e.montant} ${e.cible} = ${e.resultat} ${e.devise}<br/>`;
     });
 
 });
@@ -64,7 +65,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     else if (historique_p.innerHTML == '' && historique != null){
         historiqueArray.forEach(e => {
-            historique_p.innerHTML += `${e.date} : ${e.montant} -> ${e.resultatValue} <br/>`;
+            historique_p.innerHTML += `${e.date} : ${e.montant} ${e.cible} = ${e.resultat} ${e.devise} <br/>`;
         });
     }
 })
