@@ -51,7 +51,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15rem;
+  margin-top: 10rem;
 }
 
 .converter {
@@ -154,6 +154,11 @@ select:focus {
 .historique-hr {
   margin-top: 1rem;
   border-color: #1a1a1a; /* la couleur marche ne s'affiche pas (A fix) */
+}
+
+.historique_p p {
+  padding: 2rem;
+  font-size: 1.1rem;
 }
 
 @keyframes fadeIn {

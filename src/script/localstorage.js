@@ -44,7 +44,7 @@ form.addEventListener("submit", (e) => {
 
     historique_p.innerHTML = ''
     historiqueArray.forEach(e => { 
-        historique_p.innerHTML += `${e.date} : ${e.montant} ${e.cible} = ${e.resultat} ${e.devise}<br/>`;
+        historique_p.innerHTML += `- ${e.date} : ${e.montant} ${e.cible} = ${e.resultat} ${e.devise} <br/><br/>`;
     });
 
 });
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     else if (historique_p.innerHTML == '' && historique != null){
         historiqueArray.forEach(e => {
-            historique_p.innerHTML += `${e.date} : ${e.montant} ${e.cible} = ${e.resultat} ${e.devise} <br/>`;
+            historique_p.innerHTML += `- ${e.date} : ${e.montant} ${e.cible} = ${e.resultat} ${e.devise} <br/><br/>`;
         });
     }
 })
